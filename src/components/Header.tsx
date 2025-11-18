@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { LucideIcon } from "lucide-react";
@@ -20,26 +20,15 @@ export default function Header({ items, className, defaultActive = "Home" }: Nav
   const [mounted, setMounted] = useState(false);
   const [hoveredTab, setHoveredTab] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState<string>(defaultActive);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   if (!mounted) return null;
 
   return (
-    <div className="fixed top-5 left-0 right-0 z-[9999]">
+    <div className={cn("fixed top-5 left-0 right-0 z-[9999]", className)}>
       <div className="flex justify-center pt-6">
         <motion.div
           className="flex items-center gap-3 bg-black/50 border border-white/10 backdrop-blur-lg py-2 px-2 rounded-full shadow-lg relative"

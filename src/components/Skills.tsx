@@ -1,7 +1,7 @@
-import React from 'react';
-import { motion, useReducedMotion } from 'framer-motion';
-import { skills as skillCategories } from '@/data/content';
-import { FeatureCard } from '@/components/ui/GridFeatureCard';
+import { useMemo } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { skills as skillCategories } from "@/data/content";
+import { FeatureCard } from "@/components/ui/GridFeatureCard";
 
 // Helper component for animations
 type ViewAnimationProps = {
@@ -11,35 +11,35 @@ type ViewAnimationProps = {
 };
 
 function AnimatedContainer({ className, delay = 0.1, children }: ViewAnimationProps) {
-	const shouldReduceMotion = useReducedMotion();
+  const shouldReduceMotion = useReducedMotion();
 
-	if (shouldReduceMotion) {
-		return <div className={className}>{children}</div>;
-	}
+  if (shouldReduceMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
-	return (
-		<motion.div
-			initial={{ filter: 'blur(4px)', translateY: -8, opacity: 0 }}
-			whileInView={{ filter: 'blur(0px)', translateY: 0, opacity: 1 }}
-			viewport={{ once: true }}
-			transition={{ delay, duration: 0.8 }}
-			className={className}
-		>
-			{children}
-		</motion.div>
-	);
+  return (
+    <motion.div
+      initial={{ filter: "blur(4px)", translateY: -8, opacity: 0 }}
+      whileInView={{ filter: "blur(0px)", translateY: 0, opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ delay, duration: 0.8 }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
 }
 
 const Skills = () => {
-    const allSkills = React.useMemo(() => {
-        return Object.entries(skillCategories).flatMap(([category, skillList]) => 
-          skillList.map(skill => ({
-            title: skill.name,
-            icon: skill.icon,
-            description: `Category: ${category}`
-          }))
-        );
-      }, []);
+  const allSkills = useMemo(() => {
+    return Object.entries(skillCategories).flatMap(([category, skillList]) =>
+      skillList.map((skill) => ({
+        title: skill.name,
+        icon: skill.icon,
+        description: `Category: ${category}`,
+      }))
+    );
+  }, []);
 
   return (
     <section id="skills">
