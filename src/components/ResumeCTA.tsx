@@ -17,10 +17,10 @@ const ResumeCTA = () => {
             Want to know more about my experience?
           </h2>
           <p className="mt-3 max-w-xl mx-auto text-primary-foreground/80">
-            Download my resume to explore my skills and accomplishments in detail.
+            Download my resume to explore my skills and accomplishments.
           </p>
           <div className="mt-8">
-            <a href="/Deekshitha_NV_Resume.pdf" download>
+            <a href="/Alex_Morgan_Resume.pdf" download>
               <Button size="lg" className="bg-white text-primary hover:bg-gray-200">
                 <Download className="mr-2 h-5 w-5" /> Download Resume
               </Button>

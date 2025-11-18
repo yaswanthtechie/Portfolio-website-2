@@ -24,7 +24,7 @@ const Projects = () => {
     <section id="projects">
       <div className="section-container">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center">My Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center">Projects</h2>
           <p className="mt-4 max-w-2xl mx-auto text-center text-muted-foreground">
             A selection of my work. Filter by category to see more.
           </p>

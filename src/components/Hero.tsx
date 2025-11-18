@@ -4,10 +4,11 @@ import { Link as ScrollLink } from "react-scroll"
 const HeroSection = () => {
   const title = ".NET Full Stack Developer"
   const subtitle = {
-    regular: "Hi, I'm Deekshitha NV. I build ",
+    regular: "Hi, I'm Alex Morgan. I build ",
     gradient: "modern web applications.",
   }
-  const description = "I design and build scalable, secure, and user-friendly web applications using ASP.NET Core, Angular, and SQL Server."
+  const description =
+    "I design and develop scalable, secure, and user-friendly software using ASP.NET Core, Angular, and SQL Server."
 
   return (
     <section id="hero" className="relative">

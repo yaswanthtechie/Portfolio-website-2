@@ -10,10 +10,10 @@ import {
 } from 'lucide-react';
 import { Button, ButtonProps } from '@/components/ui/button';
 
-// Deekshitha's Data
-const APP_EMAIL = 'deekshithanarisetty@gmail.com';
-const APP_PHONE = '+91 6305455261';
-const GITHUB_LINK = 'https://github.com/NV-Deekshitha';
+// Alex's data
+const APP_EMAIL = "alex.morgan.dev@example.com";
+const APP_PHONE = "+91 98765 12345";
+const GITHUB_LINK = "https://github.com/alex-morgan";
 
 function BorderSeparator() {
 	return <div className="w-full border-b" />;
@@ -122,10 +122,10 @@ export default function Contact() {
                 <div className="mx-auto h-full max-w-6xl">
                     <div className="flex grow flex-col justify-center px-4 md:px-6 pt-32 pb-16 text-center">
                         <h1 className="text-4xl font-bold md:text-5xl font-heading">
-                            Let's Connect
+                            Contact
                         </h1>
                         <p className="text-muted-foreground mt-4 text-base">
-                            Have a question or want to work together? Feel free to reach out.
+                            Have a question or want to collaborate? Reach out anytime.
                         </p>
                     </div>
                     <BorderSeparator />

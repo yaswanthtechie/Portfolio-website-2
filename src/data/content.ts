@@ -23,21 +23,21 @@ export const navLinks = [
 export const projects = [
   {
     title: "Online Appointment Booking System",
-    description: "A secure booking platform with role-based access for administrators and users.",
+    description: "A secure booking platform featuring role-based access for administrators and customers.",
     tech: ["ASP.NET Core", "Angular", "SQL Server"],
     category: "Full Stack Applications",
     link: "#",
   },
   {
     title: "E-Commerce Web Application",
-    description: "An end-to-end online shop featuring OTP login, product management, and Razorpay integration.",
-    tech: ["ASP.NET Core", "Angular", "Razorpay"],
+    description: "A complete shopping platform with OTP login, product management, and integrated payments.",
+    tech: ["ASP.NET Core", "Angular", "Payment Gateway"],
     category: "Web Development",
     link: "#",
   },
   {
     title: "Employee Timesheet & Leave Tracker",
-    description: "An HR automation tool for tracking employee hours and managing leave requests with reporting features.",
+    description: "An HR tool for tracking employee hours, managing leave requests, and generating reports.",
     tech: ["ASP.NET MVC", "Angular"],
     category: "Enterprise Tools",
     link: "#",
